@@ -28,7 +28,7 @@ Requirement:
 - Matplotlib
 - Libsvm (Please Go to : `LIBSVM`_ to Download the library, then open a terminal direct to .libsvm.3.XX/python/ and type “make”.)
 
-.. _`LIBSVM `: https://github.com/cjlin1/libsvm
+.. _`LIBSVM`: https://github.com/cjlin1/libsvm
 
 
 SmartML Algorithm include :
@@ -82,18 +82,23 @@ from smartML.main import SmartML
 # General Usage
 
 1. First, Declare my smart ML ::
+
 	myML = SmartML()
 
-2. Load data using testSet.txt for example::
-	myML.loadfile('./testSet.txt', ',', 'supervise', normalize=‘minMax’)
+2. Load data using trainSet.txt for example::
+
+	myML.loadfile('./trainSet.txt', ',', 'supervise', normalize=‘minMax’)
 
 3. plot data (Optional)::
+
 	myML.plot(1, 0)
 
 4. dim reduce methods call (Optional)::
+
 	myML.dimReduce('FactorAnalysis')
 
 5. call ML methods::
+
     # Methods Include: 
     # unsupervise: kmeans
     # regression: Linear, local weighted linear regression (lwlr) and regression tree (regtree)
@@ -102,7 +107,7 @@ from smartML.main import SmartML
 	myML.learner(method=‘ID3’)
 
 6. test your model ::
-	myML.tester(array([[0.2, 0.9], [-1.1, 0.8], [0.4, 0.6], [0.4, -0.3], [-1, 0.9], [-0.7, 0.2]]))
+	myML.tester(test.dataset)
 
 
 7. return a result label array for testing dataset
@@ -112,9 +117,13 @@ from smartML.main import SmartML
 1. construct a probability table::
 
 	prob = {}
+
 	prob['transition'] = array([[.6, .2, .1, .2], [.6, .05, .1, .25], [.15, .05, .6, .2], [.2, .1, .3, .4]])
+	
 	prob['emission'] = array([[.2, .1, .5, .2], [.1, .4, .3, .2], [.2, .3, .5, 0], [.2, .2, .1, .5]])
+	
 	prob['state'] = ['watching TV', 'Pub Night', 'Party Night', 'Study']
+	
 	prob['observations'] = ['tired', 'hungover', 'scared', 'fine']
 
 2. call smartML::
