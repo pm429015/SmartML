@@ -26,9 +26,9 @@ Requirement:
 - Python 2.75
 - Numpy
 - Matplotlib
-- Libsvm (Please Go to : `LIBSVM`_ to Download the library, then open a terminal direct to .libsvm.3.XX/python/ and type “make”.)
+- Libsvm (Please Go to : `Libsvm`_ to Download the library, then open a terminal direct to .libsvm.3.XX/python/ and type “make”.)
 
-.. _`LIBSVM`: https://github.com/cjlin1/libsvm
+.. _`Libsvm`: https://github.com/cjlin1/libsvm/
 
 
 SmartML Algorithm include :
@@ -81,11 +81,11 @@ from smartML.main import SmartML
 
 # General Usage
 
-1. First, Declare my smart ML ::
+1. first, Declare my smart ML::
 
 	myML = SmartML()
 
-2. Load data using trainSet.txt for example::
+2. load data using trainSet.txt for example::
 
 	myML.loadfile('./trainSet.txt', ',', 'supervise', normalize=‘minMax’)
 
@@ -97,16 +97,20 @@ from smartML.main import SmartML
 
 	myML.dimReduce('FactorAnalysis')
 
+
 5. call ML methods::
 
-    # Methods Include: 
-    # unsupervise: kmeans
-    # regression: Linear, local weighted linear regression (lwlr) and regression tree (regtree)
-    # supervise: KNN, naive bayes (naivebay), logistic regression (logistic), ID3, adaboost and SVM (libsvm)
+Methods Include: 
+
+unsupervise: kmeans
+
+regression: Linear, local weighted linear regression (lwlr) and regression tree (regtree)
+
+supervise: KNN, naive bayes (naivebay), logistic regression (logistic), ID3, adaboost and SVM (libsvm)
 
 	myML.learner(method=‘ID3’)
 
-6. test your model ::
+6. test your model::
 	myML.tester(test.dataset)
 
 
