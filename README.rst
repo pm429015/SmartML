@@ -26,7 +26,11 @@ Requirement:
 - Python 2.75
 - Numpy
 - Matplotlib
-- Libsvm (Please Go to : `Libsvm`_ to Download the library, then open a terminal direct to .libsvm.3.XX/python/ and type “make”.)
+- Libsvm 
+
+(Please Go to : Libsvm to Download the library, then open a terminal direct to .libsvm.3.XX/python/ and type “make”.)
+
+`Libsvm`_
 
 .. _`Libsvm`: https://github.com/cjlin1/libsvm/
 
@@ -48,7 +52,7 @@ Normalization:
 - Z Score
 - log
 
-Supervise Algorithms (Classifers):
+Supervise Algorithms (Classifiers):
 
 - KNN
 - Logistic Regression
@@ -58,7 +62,7 @@ Supervise Algorithms (Classifers):
 - Adaboost
 
 
-Unsupervise Algorithm :
+Unsupervised Algorithm :
 
 - KMean
 
@@ -76,8 +80,9 @@ Others:
 Usage
 ============
 
+0. Import SmartML::
 
-from smartML.main import SmartML
+	from smartML.main import SmartML
 
 # General Usage
 
@@ -89,32 +94,35 @@ from smartML.main import SmartML
 
 	myML.loadfile('./trainSet.txt', ',', 'supervise', normalize=‘minMax’)
 
-3. plot data (Optional)::
+3. (Optional) plot data::
 
 	myML.plot(1, 0)
 
-4. dim reduce methods call (Optional)::
+4. (Optional) dim reduce methods call::
 
 	myML.dimReduce('FactorAnalysis')
 
 
 5. call ML methods::
 
+
 Methods Include: 
 
-unsupervise: kmeans
+- unsupervise: kmeans
 
-regression: Linear, local weighted linear regression (lwlr) and regression tree (regtree)
+- regression: Linear, local weighted linear regression (lwlr) and regression tree (regtree)
 
-supervise: KNN, naive bayes (naivebay), logistic regression (logistic), ID3, adaboost and SVM (libsvm)
+- supervise: KNN, naive bayes (naivebay), logistic regression (logistic), ID3, adaboost and SVM (libsvm)
 
 	myML.learner(method=‘ID3’)
 
 6. test your model::
+
 	myML.tester(test.dataset)
 
 
 7. return a result label array for testing dataset
+
 
 # HMM
 
@@ -132,7 +140,7 @@ supervise: KNN, naive bayes (naivebay), logistic regression (logistic), ID3, ada
 
 2. call smartML::
 
-	myML = SmartML()::
+	myML = SmartML()
 
 3. call leaner method with table::
 
