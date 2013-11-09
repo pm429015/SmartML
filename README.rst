@@ -8,9 +8,9 @@ Welcome to my Machine Learning playground. SmartML is a collection of experiment
 My ultimate goal is to build a ML toolbox that speed up the time on finding the best approach
 for your dataset. This is the reason why I call it ‘smart’ ML.
 
-Currently, this project is very far from  my ultimate goal, but it is good for anyone who want to play around the well-known ML algorithms. You are free to change or use it, but beware some unexpected bugs since I am still working on it. 
+Currently, this project is very far from  my ultimate goal, but it is good for anyone who want to play around the well-known ML algorithms. You are free to change or use it. 
 
-My blog also cover most of ML algorithms that I implemented in SmartML with examples, so feel free stop by. Thanks.
+My blog also cover most of ML algorithms that I implemented in SmartML with examples, so feel free to use it as reference. Thanks.
 
 My Blog : `Make it easy`_
 
